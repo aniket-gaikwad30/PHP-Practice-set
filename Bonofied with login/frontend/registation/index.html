@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Add New Student</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="cursor"><span></span></div>
+  
+  <div id="main">
+    <div id="cursor"><span></span></div>
+    <div class="form active">
+      <h2>Add New Student</h2>
+      <form id="loginForm" action="../../backend/Student.php"  method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required /><br/><br/>
+
+        <label for="enrollment">Enrollment Number:</label>
+        <input type="text" id="enrollment" name="enrollment" required /><br/><br/>
+
+        <label for="branch">Branch:</label>
+        <input type="text" id="branch" name="branch" required /><br/><br/>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required /><br/><br/>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required /><br/><br/>
+
+        <label for="address">Address:</label><br/><br/>
+        <textarea id="address" name="address" rows="4" required></textarea><br/><br/>
+
+        <button type="submit"><p>Add Student</p></button>
+      </form>
+    </div>
+  </div>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+  <script src="../login/script.js"></script>
+
+</body>
+</html>

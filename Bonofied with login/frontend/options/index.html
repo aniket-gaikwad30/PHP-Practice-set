@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Plus Jakarta Sans", sans-serif;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      background-image: url('https://images.unsplash.com/photo-1534088568595-a066f410bcda?q=80&w=451&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h1 {
+      margin-bottom: 40px;
+      color: white;
+      font-size: 36px;
+      text-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    .options {
+      display: flex;
+      gap: 30px;
+    }
+
+    .btn {
+      padding: 20px 30px;
+      font-size: 18px;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 15px;
+      background: rgba(255,255,255,0.1);
+      color: white;
+      cursor: pointer;
+      text-decoration: none;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      left: 0;
+      bottom: -100%;
+      border-radius: 30%;
+      transition: all 0.35s ease;
+      z-index: 0;
+    }
+
+    .btn:hover::after {
+      bottom: 0;
+      border-radius: 0;
+    }
+
+    .btn:hover {
+      color: #00e5ff;
+    }
+
+    .btn p {
+      position: relative;
+      z-index: 2;
+      margin: 0;
+      font-weight: 600;
+    }
+
+    /* Custom Cursor */
+    #cursor {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background-color: rgba(0, 217, 255, 0.3);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 10;
+      transform: translate(-50%, -50%);
+      transition: background-color 0.3s;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="cursor"></div>
+
+  <h1>Choose what you want to do</h1>
+
+  <div class="options">
+    <a href="http://localhost:8000/frontend/registation/index.html" class="btn"><p>Add New Student</p></a>
+    <a href="http://localhost:8000/frontend/getbonofied/index.html" class="btn"><p>Get Bonafide Certificate</p></a>
+  </div>
+
+  <script>
+    // Cursor movement effect
+    const cursor = document.getElementById('cursor');
+    document.addEventListener('mousemove', e => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    });
+  </script>
+
+</body>
+</html>

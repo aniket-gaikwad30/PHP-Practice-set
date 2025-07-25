@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login & Register</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="cursor"><span></span></div>
+
+  <div id="main">
+    <div class="form-container">
+      <!-- Login Form -->
+      <form id="loginForm" class="form active" action="../../backend/login.php" method="post">
+  <h2>Login</h2>
+  <label>Username</label>
+  <input name="username" type="text" placeholder="Enter your username" required />
+  <label>Password</label>
+  <input name="password" type="password" placeholder="Enter your password" required />
+  <button type="submit"><p>Login</p></button>
+  <p class="switch">Not registered? <span id="showRegister">Register here</span></p>
+</form>
+
+      <!-- Register Form -->
+      <form id="registerForm" class="form" action="../../backend/auth.php" method="post">
+        <h2>Register</h2>
+        <label>Username</label>
+        <input name="username" type="text" placeholder="Choose a username" required />
+        <label>Email</label>
+        <input name="email" type="email" placeholder="Enter your email" required />
+        <label>Password</label>
+        <input name="password" type="password" placeholder="Create a password" required />
+        <button type="submit">Register</button>
+        <p class="switch">Already have an account? <span id="showLogin">Login here</span></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
